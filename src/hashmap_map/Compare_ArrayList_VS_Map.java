@@ -62,7 +62,7 @@ public class Compare_ArrayList_VS_Map {
 			System.out.println("[ArrayList] Khong tim thay sinh vien");
 		}
 
-		// Cách 2: Dung HashMap
+		// Cách 2: Dùng HashMap
 		// khai báo và gán start/end
 		long start2 = System.nanoTime();
 

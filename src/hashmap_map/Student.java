@@ -13,6 +13,10 @@ public class Student {
 		this.major = major;
 	}
 
+	// Phương thức toString(): Là phương thức có sẵn trong lớp Object – lớp cha của
+	// mọi lớp trong Java.
+	// Ghi đè toString() giúp tùy chỉnh thông tin hiển thị khi đối tượng được in ra
+
 	@Override
 	public String toString() {
 		return id + " - " + name + " (" + major + ")";
