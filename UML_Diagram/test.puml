@@ -1,0 +1,34 @@
+@startuml
+start
+
+:Hiển thị tài khoản;
+:Nhập số tiền cược;
+if (Cược hợp lệ?) then (Yes)
+  :Nhập lựa chọn Tài / Xỉu;
+  :Tung 3 viên xúc xắc;
+  :Tính tổng xúc xắc;
+  if (Tổng = 3 hoặc 18?) then (Yes)
+    :Người chơi thua;
+    :Trừ tiền cược;
+  else (No)
+    if (Tổng là Xỉu?) then (Yes)
+      if (Chọn Xỉu?) then (Yes)
+        :Thắng + cộng tiền;
+      else (No)
+        :Thua + trừ tiền;
+      endif
+    else (Tổng là Tài)
+      if (Chọn Tài?) then (Yes)
+        :Thắng + cộng tiền;
+      else (No)
+        :Thua + trừ tiền;
+      endif
+    endif
+  endif
+  :Ghi log kết quả;
+else (No)
+  :Thông báo lỗi cược;
+endif
+
+stop
+@enduml

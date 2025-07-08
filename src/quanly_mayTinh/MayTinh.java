@@ -45,17 +45,17 @@ public class MayTinh {
 		this.thoiGianBaoHanh = thoiGianBaoHanh;
 	}
 
-	@Override
-	public String toString() {
-		return "MayTinh [hangSanXuat=" + hangSanXuat + ", ngaySanXuat=" + ngaySanXuat + ", giaBan=" + giaBan
-				+ ", thoiGianBaoHanh=" + thoiGianBaoHanh + "]";
-	}
-
 	public boolean kiemTraGiaReHon(MayTinh mayTinh) {
 		return this.getGiaBan() < mayTinh.getGiaBan();
 	}
 
 	public String layTenQuocGia() {
 		return getHangSanXuat().getQuocGia().getTenQuocGia();
+	}
+
+	@Override
+	public String toString() {
+		return "MayTinh [hangSanXuat=" + hangSanXuat + ", ngaySanXuat=" + ngaySanXuat + ", giaBan=" + giaBan
+				+ ", thoiGianBaoHanh=" + thoiGianBaoHanh + "]";
 	}
 }
